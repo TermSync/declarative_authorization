@@ -600,7 +600,8 @@ module Authorization
       protected
       def filter_access_permissions # :nodoc:
         unless filter_access_permissions?
-          ancestors[1..-1].reverse.each do |mod|
+          ancestors.reverse.each do |mod|
+            next if name == mod.name
             mod.filter_access_permissions if mod.respond_to?(:filter_access_permissions, true)
           end
         end
