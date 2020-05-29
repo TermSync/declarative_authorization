@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.files = %w{CHANGELOG MIT-LICENSE README.rdoc Rakefile authorization_rules.dist.rb garlic_example.rb init.rb} + Dir["app/**/*.rb"] + Dir["app/**/*.erb"] + Dir["config/*"] + Dir["lib/*.rb"] + Dir["lib/**/*.rb"] + Dir["lib/tasks/*"] + Dir["test/*"]
   s.extra_rdoc_files = ['README.rdoc', 'CHANGELOG']
   s.homepage = %q{http://github.com/stffn/declarative_authorization}
-  s.add_dependency('rails', '>= 4.0.0', '< 5.2.0')
+  s.add_dependency('rails', '>= 4.0.0')
   s.add_development_dependency('test-unit')
 end
